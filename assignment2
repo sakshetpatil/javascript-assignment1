@@ -1,0 +1,60 @@
+//2. Clicking on the coloured block should change the background colour, also store the current clicked colour locally so that upon opening the file again the background colour is set by reading the previously stored colour
+<html>
+    <head>
+        <title>color blocks</title>
+        <style>
+            body{
+                background-color: lightgray;
+            }
+            .block{
+                width: 50px;
+                height: 50px;
+                margin: 10px;
+                display: inline-block;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            #block1{
+                background-color: red;
+            }
+            #block2{
+                background-color: orange;
+            }
+            #block3{
+                background-color: yellow;
+            }
+            #block4{
+                background-color: green;
+            }
+            #block5{
+                background-color: blue;
+            }
+            #block6{
+                background-color: purple;
+            }
+            </style>
+
+            <script>
+                const previousColor=localStorage.getItem("color")||"lightgray";
+                document.body.style.backgroundColor=previousColor;
+                const blocks = document.querySelectorAll(".block");
+                blocks.forEach(block => {
+                block.addEventListener("click", () => {
+          
+                 const currentColor = block.style.backgroundColor;
+                const currentColor=block.style.backgroundColor;
+                document.body.style.backgroundColor=currentColor;
+                localStorage.setItem("color",currentColor);
+                });
+             });
+            </script>
+            <body>
+                <div id="block1"class="block"></div>
+                <div id="block2"class="block"></div>
+                <div id="block3"class="block"></div>
+                <div id="block4"class="block"></div>
+                <div id="block5"class="block"></div>
+                <div id="block6"class="block"></div>
+            </body>
+    </head>
+</html>
