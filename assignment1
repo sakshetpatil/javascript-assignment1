@@ -1,0 +1,44 @@
+// 1. Create a page where the body will contain 6 blocks coloured with unique colours (div’s of any size), positioned 3 on each row and size of each block should be small so that the background should be visible
+<html>
+<head>
+    <title>colored blocks</title>
+<style>
+    body{ 
+        background-color:-lightgray;
+    }
+    .block{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        display: inline-block;
+        border-radius: 5px;
+    }
+#block1{
+    background-color: red;
+}
+#block2{
+    background-color: orange;
+}
+#block3{
+    background-color: yellow;
+}
+#block4{
+    background-color: green;
+}
+#block5{
+    background-color: blue;
+}
+#block6{
+    background-color: purple;
+}
+</style>
+</head>
+<body>
+    <div id="block1"class="block"></div>
+    <div id="block2"class="block"></div>
+    <div id="block3"class="block"></div>
+    <div id="block4"class="block"></div>
+    <div id="block5"class="block"></div>
+    <div id="block6"class="block"></div>
+</body>
+</html>
